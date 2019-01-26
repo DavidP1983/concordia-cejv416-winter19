@@ -16,7 +16,7 @@ public class string1 {
      */
     public static void main(String[] args) {
        int first = 14;
-       int second = 4;
+       int second = 3;
        
        String firstString = Integer.toString(first);
        String secondString = Integer.toString(second);
@@ -24,6 +24,7 @@ public class string1 {
        System.out.println(firstString + "*" + secondString + " is " + (first * second));
        System.out.println(firstString + "%" + secondString + " is " + (first % second));
        System.out.println(firstString + "/" + secondString + " is " + (first / second));
+       System.out.println(firstString + "/" + secondString + " is " + ((float)first / second));
 
        
     }
