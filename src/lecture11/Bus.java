@@ -22,7 +22,7 @@ public class Bus extends Vehicle {
  }  
   public String toString(){
     
-    return "My class type is Bus,my color is " + this.color + "and my weight is" + this.weight;
+    return "My class type is "  + getClass().getSimpleName()+ " my color is "  + this.color + " and my weight is " + this.weight;
     }
  
  
