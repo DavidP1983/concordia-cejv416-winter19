@@ -27,6 +27,11 @@ public class MyList {
         System.out.println(formatArrayForPrinting(myList));
         System.out.println("The sum of the array is - " + sumArray(myList));
         System.out.println("Largest - " + largestArrayValue(myList));
+
+//        int[] testArray = {1,2,3,4};
+        int[] newArray = shiftArray(myList);
+        System.out.println(formatArrayForPrinting(newArray));
+
     }
 
 //    Largest number_____________________________________________________________________
@@ -40,17 +45,16 @@ public class MyList {
         return counterSum;
     }
 
-    
     public static int largestArrayValue(int[] inputArray) {
 
-int largest = inputArray[0];
+        int largest = inputArray[0];
 
-for (int x=0; x<inputArray.length; x++)
-{
-    if (inputArray[x] > largest)
-        largest = inputArray[x];
-}
-return largest;
+        for (int x = 0; x < inputArray.length; x++) {
+            if (inputArray[x] > largest) {
+                largest = inputArray[x];
+            }
+        }
+        return largest;
     }
 
 //      ________________________________________________________________________________  
@@ -68,5 +72,17 @@ return largest;
         return sb.toString();
 
     }
+//______________________________________________________Naoborot numbers
 
+    public static int[] shiftArray(int[] inputArray) {
+
+        int firstMember = inputArray[0];
+        for (int x = 1; x < inputArray.length; x++) {
+            inputArray[x - 1] = inputArray[x];
+        }
+//peremeshenie A v conec
+        inputArray[inputArray.length - 1] = firstMember;
+
+        return inputArray;
+    }
 }
